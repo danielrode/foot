@@ -100,6 +100,8 @@
   e.g. integrated graphics ([#2182][2182]).
 * Jump label colors in the modus-operandi theme, for improved
   readability.
+* Scrollback search is now case sensitive when the search string
+  contains at least one upper case character.
 
 [2182]: https://codeberg.org/dnkl/foot/issues/2182
 
