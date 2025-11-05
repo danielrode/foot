@@ -180,6 +180,7 @@ execute_binding(struct seat *seat, struct terminal *term,
             return true;
         }
         selection_to_clipboard(seat, term, serial);
+        selection_cancel(term);
         return true;
 
     case BIND_ACTION_CLIPBOARD_PASTE:
