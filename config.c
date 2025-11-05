@@ -118,6 +118,7 @@ static const char *const binding_action_map[] = {
     [BIND_ACTION_SCROLLBACK_HOME] = "scrollback-home",
     [BIND_ACTION_SCROLLBACK_END] = "scrollback-end",
     [BIND_ACTION_CLIPBOARD_COPY] = "clipboard-copy",
+    [BIND_ACTION_CLIPBOARD_COPY_OR_CANCEL] = "clipboard-copy-or-cancel",
     [BIND_ACTION_CLIPBOARD_PASTE] = "clipboard-paste",
     [BIND_ACTION_PRIMARY_PASTE] = "primary-paste",
     [BIND_ACTION_SEARCH_START] = "search-start",

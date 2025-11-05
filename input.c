@@ -173,6 +173,15 @@ execute_binding(struct seat *seat, struct terminal *term,
         selection_to_clipboard(seat, term, serial);
         return true;
 
+    case BIND_ACTION_CLIPBOARD_COPY_OR_CANCEL:
+        if (term->selection.coords.start.row < 0 || term->selection.coords.end.row < 0) {
+            // If no selection, send CTRL+C signal to process
+            term_to_slave(term, "\x03", 1);
+            return true;
+        }
+        selection_to_clipboard(seat, term, serial);
+        return true;
+
     case BIND_ACTION_CLIPBOARD_PASTE:
         selection_from_clipboard(seat, term, serial);
         term_reset_view(term);
